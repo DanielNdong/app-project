@@ -1,0 +1,69 @@
+<app-header></app-header>
+<main class="w-full">
+  <div class="w-full h-4/5" style="background-image: url('https://vojislavd.com/ta-template-demo/assets/img/coming-soon.jpg');">
+    <div class="w-full h-full bg-black bg-opacity-70">
+        <div class="w-full h-full flex flex-col items-center justify-between container mx-auto py-8 px-8 lg:px-4 xl:px-0">
+            <div class="grid flex-col items-center justify-center">
+                <h1 class="text-6xl align-center lg:text-7xl xl:text-8xl text-gray-200 tracking-wider font-bold font-serif mt-12 text-center md:text-left">Mi <span class="text-yellow-300">landing</span> page</h1>               
+                <div class="flex flex-col justify-center items-center space-y-4 mt-16 px-6">
+                    <p class="text-gray-300 uppercase text-sm">Para ver al usuario dale click a <a routerLink="/user" class="underline">Mi perfil</a></p>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+    <script>
+        function timer(expiry) {
+            return {
+                expiry: expiry,
+                remaining:null,
+                init() {
+                this.setRemaining()
+                setInterval(() => {
+                    this.setRemaining();
+                }, 1000);
+                },
+                setRemaining() {
+                const diff = this.expiry - new Date().getTime();
+                this.remaining =  parseInt(diff / 1000);
+                },
+                days() {
+                return {
+                    value:this.remaining / 86400,
+                    remaining:this.remaining % 86400
+                };
+                },
+                hours() {
+                return {
+                    value:this.days().remaining / 3600,
+                    remaining:this.days().remaining % 3600
+                };
+                },
+                minutes() {
+                    return {
+                    value:this.hours().remaining / 60,
+                    remaining:this.hours().remaining % 60
+                };
+                },
+                seconds() {
+                    return {
+                    value:this.minutes().remaining,
+                };
+                },
+                format(value) {
+                return ("0" + parseInt(value)).slice(-2)
+                },
+                time(){
+                    return {
+                    days:this.format(this.days().value),
+                    hours:this.format(this.hours().value),
+                    minutes:this.format(this.minutes().value),
+                    seconds:this.format(this.seconds().value),
+                }
+                },
+            }
+        }
+    </script>
+</main>

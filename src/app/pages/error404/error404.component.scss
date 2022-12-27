@@ -1,0 +1,22 @@
+
+h1,p{
+    color: #fafafa;
+}
+
+button{
+    background-color: #a8abb4;
+    color: #252525;
+    font-weight: 500;
+    border: solid 2px #467db4;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    min-height: 100px;
+    height: 300px;
+}
