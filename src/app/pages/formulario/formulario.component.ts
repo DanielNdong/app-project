@@ -6,10 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formulario.component.scss']
 })
 export class FormularioComponent implements OnInit {
-  public inputsValue:any = {
-    nameForm: '',
-    email: ''
-  };
+
   public showData = false;
 
   constructor() { }
@@ -35,5 +32,8 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  public inputsValue:any = {
+    nameForm: '',
+    email: ''
+  };
 }

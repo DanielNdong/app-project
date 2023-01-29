@@ -1,0 +1,33 @@
+<button
+  routerLink="/user"
+  class="relative top-5 left-8 mb-5 flex items-center hover:bg-zinc-700 p-2 rounded-sm text-white"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
+      clip-rule="evenodd"
+    ></path>
+  </svg>
+  Volver
+</button>
+<div
+  class="grid gap-3 px-5 mb-8 md:mb-12 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6"
+>
+    <div 
+      *ngFor="let anime of animeList" 
+      class="border border-gray-200 rounded-sm shadow-sm dark:border-gray-700">
+      <app-cards [animeDataAtribute]="anime"></app-cards>
+    </div>
+  
+    <button 
+      (click)="getMangaList()" 
+      class="btn bg-green-500 text-white p-2 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 bg-green-500 hover:bg-green-700 drop-shadow-md hover:drop-shadow-2xl rounded-sm hover:text-gray-300 cursor-pointer">
+      SEE MANGAS
+    </button>
+</div>  

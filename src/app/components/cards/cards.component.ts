@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IAnime } from 'src/app/models/anime.interface';
 
 @Component({
   selector: 'app-cards',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent implements OnInit {
-
+  @Input('animeDataAtribute') animeDataAtribute!:IAnime;
+  
   constructor() { }
 
   ngOnInit(): void {

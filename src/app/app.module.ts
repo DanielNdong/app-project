@@ -14,9 +14,10 @@ import { CardsComponent } from './components/cards/cards.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { CurriculumVitaeComponent } from './pages/curriculum-vitae/curriculum-vitae.component';
 import { MostrarSiDirective } from './directive/link-effect.directive';
-import { FormsModule } from '@angular/forms';
 import { ChangeColorInputDirective } from './directive/change-color-input.directive';
-
+import { AnimeListComponent } from './components/anime-list/anime-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,11 +34,14 @@ import { ChangeColorInputDirective } from './directive/change-color-input.direct
     CurriculumVitaeComponent,
     MostrarSiDirective,
     ChangeColorInputDirective,
+    AnimeListComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
