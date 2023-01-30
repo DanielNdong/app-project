@@ -22,12 +22,25 @@
     <div 
       *ngFor="let anime of animeList" 
       class="border border-gray-200 rounded-sm shadow-sm dark:border-gray-700">
-      <app-cards [animeDataAtribute]="anime"></app-cards>
+      <app-cards 
+        (click)="clickedCard(anime)" 
+        [animeData]="anime">
+      </app-cards>
     </div>
   
-    <button 
-      (click)="getMangaList()" 
-      class="btn bg-green-500 text-white p-2 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 bg-green-500 hover:bg-green-700 drop-shadow-md hover:drop-shadow-2xl rounded-sm hover:text-gray-300 cursor-pointer">
-      SEE MANGAS
-    </button>
+      <button 
+        *ngIf="showMangas; 
+        else showAnimes"
+        (click)="getMangaList()" 
+        class="btn text-white p-2 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 bg-green-500 hover:bg-green-700 active:bg-green-600 drop-shadow-md hover:drop-shadow-2xl rounded-sm hover:text-gray-300 cursor-pointer">
+        SEE MANGAS
+      </button>
+
+    <ng-template #showAnimes>
+      <button 
+        (click)="getAnimeList()" 
+        class="btn text-white p-2 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100 bg-green-500 hover:bg-green-700 active:bg-green-600 drop-shadow-md hover:drop-shadow-2xl rounded-sm hover:text-gray-300 cursor-pointer">
+        SEE ANIMES
+      </button>
+    </ng-template>
 </div>  

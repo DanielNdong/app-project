@@ -1,29 +1,29 @@
   <div class="wrapper brightness-100 hover:brightness-125 antialiased text-gray-900 transition ease-in-out delay-100 hover:-translate-y-1 hover:scale-100">
         <div class="">
           <img
-            [src]="animeDataAtribute.attributes.posterImage.medium "
-            [alt]="animeDataAtribute.attributes.canonicalTitle"
+            [src]="animeData.attributes.posterImage.medium "
+            [alt]="animeData.attributes.canonicalTitle"
             class="w-full h-full object-cover object-center rounded-lg shadow-md bg-gray-500 "
           />
           <div class="relative px-4 -translate-y-0">
             <div class="bg-white p-6 rounded-lg shadow-lg">
               <div class="grid items-baseline">
                 <div>
-                  <h4 class="mt-1 inline text-xl font-semibold">
-                    {{ animeDataAtribute.attributes.canonicalTitle}}
+                  <h4 class="mt-1 inline text-lg font-semibold">
+                    {{ animeData.attributes.canonicalTitle | uppercase}}
                   </h4>
                   <span
                     [class]="
                       'text-gray-600 text-lg '
                     "
-                    >{{ animeDataAtribute.attributes.status }}</span
+                    >{{ animeData.attributes.status}}</span
                   >
                 </div>
                 <span class="text-teal-600 text-md font-semibold text-lg"
-                  >{{ animeDataAtribute.attributes.popularityRank }}
+                  >{{ animeData.attributes.popularityRank }}
                 </span>
                 <span class="text-sm text-gray-600"
-                  >{{ animeDataAtribute.attributes.ageRatingGuide }}
+                  >{{ animeData.attributes.ageRatingGuide | percent}}
                 </span>
               </div>
             </div>

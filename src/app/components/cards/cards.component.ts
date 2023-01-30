@@ -7,7 +7,7 @@ import { IAnime } from 'src/app/models/anime.interface';
   styleUrls: ['./cards.component.scss']
 })
 export class CardsComponent implements OnInit {
-  @Input('animeDataAtribute') animeDataAtribute!:IAnime;
+  @Input('animeData') animeData!:IAnime;
   
   constructor() { }
 

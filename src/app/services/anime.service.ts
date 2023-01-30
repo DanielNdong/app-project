@@ -6,12 +6,9 @@ import { IAnime } from '../models/anime.interface';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AnimeService {
-  private readonly URL_API = "https://kitsu.io/api/edge"
-  /* public apiGamesOne: string = 'https://rickandmortyapi.com/api/character';
-  public apiCharacterAliveFiltered: string = 'https://rickandmortyapi.com/api/character/?name=rick&status=alive';
-  public apiCharacterDeathFiltered: string = 'https://rickandmortyapi.com/api/character/?name=rick&status=dead';
-  public apiGamesTwo: string = 'https://api.rawg.io/api/games'; */
+  private readonly URL_API = "https://kitsu.io/api/edge";
 
   constructor(
     private httpClient: HttpClient
